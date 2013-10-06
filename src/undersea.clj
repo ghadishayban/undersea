@@ -59,7 +59,7 @@
      :you-are-alone
 
      (= (count neighbors) 1)
-     (grab-from (-> neighbors first :uri) k)
+     (grab-from (-> neighbors first :url) k)
 
      :else
      :ambiguous-peer)))

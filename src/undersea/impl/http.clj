@@ -34,7 +34,6 @@
 
 (defn- handler [s]
   (fn [req]
-    (println req)
     (let [req (route req)
           resp (handle req @s)]
       (response (with-out-str (pr resp))))))
