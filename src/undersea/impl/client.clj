@@ -3,6 +3,8 @@
             [clj-http.client :as http]
             [clojure.edn :as edn]))
 
+;; change to use URI slurp?
+
 (defrecord HttpClient [uri]
   p/Neighbor
   (available [_]

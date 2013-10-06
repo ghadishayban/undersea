@@ -69,7 +69,7 @@
   (->> (whoisaround?)
        (filter #(= (:name %) p))
        first
-       :uri))
+       :url))
 
 (defn browse-peer [peer-name]
   (available (client (find-peer-uri peer-name))))
