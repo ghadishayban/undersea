@@ -49,7 +49,7 @@
 (defn- grab-from
   [uri k]
   (let [c (client uri)]
-    (retrieve c k)))
+    (retrieve c (name k))))
 
 (defn grab
   [k]
