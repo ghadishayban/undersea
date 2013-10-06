@@ -13,7 +13,7 @@
    :addresses (seq (.getHostAddresses s))
    :id (.getKey s)
    :name (.getName s)
-   :url (.getURL s)
+   :url (.getURL s) ;; deprecated
    :service-type (.getProtocol s)
    :fq-name (.getQualifiedName s)
    :urls (seq (.getURLs s))})
@@ -29,8 +29,9 @@
     (.unregisterAllServices instance)
     this)
   (discover [_]
-    (Thread/sleep 500)
-    @store))
+    (->> (vals @store)
+         (filter map?)
+         (into []))))
 
 (defn listener [store]
   (reify ServiceListener
