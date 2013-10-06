@@ -9,4 +9,5 @@
                  [ring/ring-core "1.2.0"]
                  [ring/ring-jetty-adapter "1.2.0"]
                  [me.raynes/conch "0.5.0"]
+                 [javax.jmdns/jmdns "3.4.1"]
                  [clout "1.1.0"]])
