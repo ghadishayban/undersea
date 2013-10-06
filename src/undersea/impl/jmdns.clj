@@ -44,7 +44,7 @@
              (.getName event)
              (service-info->map (.getInfo event))))))
 
-(defn make-service [name]
+(defn dnssd-service [name]
   (let [jm (JmDNS/create)
         store (atom {})]
     (.addServiceListener jm "_edn._tcp.local." (listener store))

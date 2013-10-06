@@ -21,7 +21,7 @@
 
 (defmulti ^:private handle
   (fn [req store]
-    (get :action req)))
+    (get req :action)))
 
 (defmethod handle :available
   [req store]
@@ -34,6 +34,7 @@
 
 (defn- handler [s]
   (fn [req]
+    (println req)
     (let [req (route req)
           resp (handle req @s)]
       (response (with-out-str (pr resp))))))
@@ -41,8 +42,8 @@
 (def ^:private default-options
   {:join? false
    :port 0 ;; randomized port
-   :min-threads 1
-   :max-threads 4})
+   :min-threads 2
+   :max-threads 5})
 
 (defn- listen-port [s]
   (-> s
@@ -62,7 +63,7 @@
   (stop [this]
     (.stop (get this :server))))
 
-(defn underserve
+(defn server
   []
   (let [jetty (JettyServer. (atom {}))]
     (p/start jetty)))

@@ -15,3 +15,6 @@
         http/get
         :body
         edn/read-string)))
+
+(defn client [uri]
+  (HttpClient. uri))
