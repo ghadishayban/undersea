@@ -8,4 +8,5 @@
                  [clj-http "0.7.7"]
                  [ring/ring-core "1.2.0"]
                  [ring/ring-jetty-adapter "1.2.0"]
+                 [me.raynes/conch "0.5.0"]
                  [clout "1.1.0"]])

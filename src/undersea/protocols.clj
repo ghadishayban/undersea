@@ -10,4 +10,6 @@
   (stop [_]))
 
 (defprotocol DNSSD
-  (publish [_ options]))
+  (publish [_ options])
+  (unpublish [_])
+  (discover [_]))
