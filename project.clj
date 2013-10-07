@@ -1,4 +1,4 @@
-(defproject undersea "0.1.0-SNAPSHOT"
+(defproject undersea "0.0.1"
   :description "Decentralized REPL data sharing"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"

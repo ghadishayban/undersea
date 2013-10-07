@@ -4,7 +4,7 @@ Decentralized REPL data sharing over DNS-SD/Bonjour
 
 ## Usage
 
-A dev tool to seamlessly grab EDN-readable data from REPLs on the same LAN.
+A dev tool to seamlessly grab EDN-readable data from other REPLs on the same LAN.
 
 Send from your node:
 
@@ -25,6 +25,10 @@ To receive data from any REPL on the same local network:
 ## Pull request welcome for:
 
 If there are multiple nodes on the network it will grab the key from the first one that succeeds
+
+## Limitations
+Local LAN only (maybe explore IPv6 DNS-SD sharing)
+EDN readable data
 
 ## License
 
