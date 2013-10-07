@@ -1,10 +1,26 @@
 # undersea
 
-Decentralized REPL data sharing
+Decentralized REPL data sharing over DNS-SD/Bonjour
 
 ## Usage
 
-FIXME
+A dev tool to seamlessly grab EDN-readable data from REPLs on the same LAN.
+
+Send from your node:
+
+(use 'undersea)
+(broadcast "your-node-name")  ;; a simple ID for DNS-SD/Bonjour
+
+(share! :groceries #{:milk :eggs :cheetos})
+
+To receive data from any REPL on the same local network:
+
+(grab :groceries)
+=> #{:milk :eggs :cheetos}
+
+Pull request welcome for:
+
+If there are multiple nodes on the network it will grab the key from the first one that succeeds
 
 ## License
 
