@@ -2,6 +2,8 @@
 
 Decentralized REPL data sharing over DNS-SD/Bonjour
 
+[undersea "0.0.1"]
+
 ## Usage
 
 A dev tool to seamlessly grab EDN-readable data from other REPLs on the same LAN.
@@ -29,6 +31,7 @@ If there are multiple nodes on the network it will grab the key from the first o
 ## Limitations
 Local LAN only (maybe explore IPv6 DNS-SD sharing)
 EDN readable data
+Totally unsecure and unencrypted
 
 ## License
 
